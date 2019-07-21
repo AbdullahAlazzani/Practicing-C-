@@ -1,0 +1,55 @@
+/*
+Rock Paper Scissors Game
+*/
+
+#include <iostream>
+#include <stdlib.h>
+int main(){
+bool start = true;
+std::cout << "====================\n";
+std::cout << "rock paper scissors!\n";
+std::cout << "====================\n\n";
+
+while (start = true){
+srand (time(NULL));
+int computer = rand() % 3 + 1;
+int user = 0;
+std::cout << "1) ✊\n";
+std::cout << "2) ✋\n";
+std::cout << "3) ✌️\n";
+std::cout << "shoot! ";
+std::cin >> user;
+
+if (computer == 1 && user == 1){
+  std::cout <<" You chose ✊ and the computer chose ✊\n..... That's tie! .....\n";
+}
+else if (computer == 1 && user == 2){
+  std::cout <<" You chose ✋ and the computer chose ✊\n..... Yay you won! .....\n";
+}
+else if (computer == 1 && user == 3){
+  std::cout <<" You chose ✌️ and the computer chose ✊\n..... Aww you lost! .....\n";
+}
+else if (computer == 2 && user == 1){
+  std::cout <<" You chose ✊ and the computer chose ✋\n..... Aww you lost! .....\n";
+}
+else if (computer == 2 && user == 2){
+  std::cout <<" You chose ✋ and the computer chose ✋\n..... That's tie! .....\n";
+}
+else if (computer == 2 && user == 3){
+  std::cout <<" You chose ✌️ and the computer chose ✋\n..... Yay you won! .....\n";
+}
+else if (computer == 3 && user == 1){
+  std::cout <<" You chose ✊ and the computer chose ✌️\n..... Yay you won! .....\n";
+}
+else if (computer == 3 && user == 2){
+  std::cout <<" You chose ✋ and the computer chose ✌️\n..... Aww you lost! .....\n";
+}
+else if (computer == 3 && user == 3){
+  std::cout <<" You chose ✌️ and the computer chose ✌️\n..... That's tie! .....\n";
+}
+else{
+  std::cout<< "Invalid input .. Try agin!!";
+}
+}
+return 0;
+}
