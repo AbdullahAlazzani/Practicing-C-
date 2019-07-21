@@ -1,0 +1,81 @@
+The Magic 8-Ball is a super popular toy used for fortune-telling or seeking advice,
+developed in the 1950s!
+____________________________________________________________________________________
+
+#include <iostream>
+#include <cstdlib>
+
+int main(){
+  std::string question;
+  std::cout<<"MAGIC 8-BALL: \n\n";
+  bool start = true;
+  while (start == true){ 
+  std::cout<<"Ask me anything: (yes or no questions)  \n\n";
+  std::cin >> question;
+  srand(time(NULL));
+  int answer = std::rand() % 20;
+  
+  
+  if (answer == 0){
+    std::cout <<"\nIt is certain.\n";
+  }
+  else if (answer == 1){
+    std::cout<<"\nIt is decidedly so.\n";
+  }
+   else if (answer == 2){
+    std::cout<<"\nWithout a doubt.\n";
+  }
+  else if (answer == 3){
+    std::cout<<"\nYes - definitely.\n";
+  }
+  else if (answer == 4){
+    std::cout<<"\nYou may rely on it.\n";
+  }
+  else if (answer == 5){
+    std::cout<<"\nAs I see it, yes.\n";
+  }
+  else if (answer == 6){
+    std::cout<<"\nMost likely.\n";
+  }
+  else if (answer == 7){
+    std::cout<<"\nOutlook good.\n";
+  }
+  else if (answer == 8){
+    std::cout<<"\nYes.\n";
+  }
+  else if (answer == 9){
+    std::cout<<"\nSigns point to yes.\n";
+  }
+  else if (answer == 11){
+    std::cout<<"\nReply hazy, try again.\n";
+  }
+  else if (answer == 12){
+    std::cout<<"\nAsk again later.\n";
+  }
+  else if (answer == 13){
+    std::cout<<"\nBetter not tell you now.\n";
+  }
+  else if (answer == 14){
+    std::cout<<"\nCannot predict now.\n";
+  }
+  else if (answer == 15){
+    std::cout<<"\nConcentrate and ask again.\n";
+  }
+  else if (answer == 16){
+    std::cout<<"\nDon't count on it.\n";
+  }
+  else if (answer == 17){
+    std::cout<<"\nMy reply is no.\n";
+  }
+  else if (answer == 18){
+    std::cout<<"\nMy sources say no.\n";
+  }
+  else if (answer == 19){
+    std::cout<<"\nOutlook not so good.\n";
+  }
+  else {
+    std::cout<< "\nVery doubtful.\n";  
+  }
+  }
+  return 0;
+}
