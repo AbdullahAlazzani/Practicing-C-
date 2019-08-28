@@ -1,0 +1,35 @@
+/*
+Triangle Display
+Write a program that uses nested loops to display the triangle pattern shown below.
+	+
+	+++
+	+++++
+	+++++++
+	+++++
+	+++
+	+
+*/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int EndL = 1; 
+
+	for(int Row = 1; Row <= 7; Row++)
+	{
+		cout << "    ";
+
+		for(int L = 1; L <= EndL; L++)
+		{
+			cout << "+";
+		}
+		if (Row < 4)
+			EndL += 2;
+		else
+			EndL -= 2;
+
+		cout << endl; 
+	cout << endl;
+	return 0;
+}
